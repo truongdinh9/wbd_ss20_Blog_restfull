@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<head th:replace="layout :: head">-->
+<head>
+</head>
+<body>
+<h1>blog information </h1>
+<p>
+    <!--<div th:if="${message}">-->
+    <!--<span th:text="${message}"></span>-->
+    <!--</div>-->
+</p>
+<p>
+    <a href="/blog">Back to blog list</a>
+</p>
+<form  th:object="${blog}">
+    <fieldset>
+        <input type="hidden" th:field="*{id}" >
+        <legend>blog information</legend>
+        <table>
+            <!--<tr>-->
+                <!--<td>Name: </td>-->
+                <!--<td th:text="${blog.getName()}"></td>-->
+            <!--</tr>-->
+            <tr>
+                <td>Title: </td>
+                <td th:text="${blog.title}"></td>
+
+            </tr>
+            <tr>
+                <td>Content: </td>
+                <td th:text="${blog.getDescription()}"></td>
+            </tr>
+            <tr>
+                <td></td>
+
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+<!--<footer th:replace="layout :: footer"></footer>-->
+</html>
